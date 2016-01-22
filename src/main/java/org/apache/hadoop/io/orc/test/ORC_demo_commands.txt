@@ -1,0 +1,666 @@
+Following is the Hive commands:
+----------------------------------------
+1.Create normal table with sample data:
+create table orignal(
+  TIMEID string,
+  FILE_COLUMN_ID int,
+  CITY_ID int,
+  USER_BRAND_ID int,
+  CODE_ID int,
+  PROVINCENODE_ID int,
+  MANUFACTURER_ID int,
+  SYSTEM_ID int,
+  STATSTIME string,
+  MSISDN string,
+  TS_INCOMING_HTTP_REQ string,
+  TS_OUTGOING_HTTP_REQ string,
+  TS_INCOMING_HTTP_RESP string,
+  TS_OUTGOING_HTTP_RESP string,
+  TS_ACK_OR_ABORT string,
+  DURATION_TIME string,
+  URL string,
+  SP_DOMAIN string,
+  FILE_TYPE string,
+  SERVICE_TYPE string,
+  USER_AGENT_ORIGIN string,
+  USER_AGETN string,
+  SOFT_VERSION string,
+  HTTP_STATUS_CODE string,
+  HTTP_STATUS_SUBCODE string,
+  BEARER_TYPE string,
+  PROTOCAL_TYPE string,
+  CLIENT_ADDRESS string,
+  UPLINK_TRAFFIC string,
+  DOWNLINK_TRAFFIC string,
+  VOLUMESTREAM string,
+  WAPGW_IP string,
+  CDR_TYPE string,
+  SESSION_ID string,
+  GW_AVG string,
+  SP_AVG string,
+  NAS_IP_ADDR string,
+  APN string,
+  DESC_PORT string,
+  FILE_NAME string,
+  BACKUPA string,
+  BACKUPB string,
+  BACKUPC string,
+  BACKUPD string,
+  BACKUPE string,
+  HOUR string,
+  BACKUPF string,
+  BACKUPG string,
+  BACKUPH string,
+  SGSNIP string,
+  SPIP string,
+  SP_DOMAIN_L1 string,
+  SP_DOMAIN_L2 string,
+  BP_IP string,
+  LOAD_TIME string,
+  a1 string,
+  a2 string,
+  a3 string,
+  a4 string,
+  a5 string,
+  a6 string,
+  a7 string,
+  a8 string,
+  a9 string,
+  a10 string,
+  a11 string,
+  a12 string,
+  a13 string,
+  a14 string,
+  a15 string,
+  a16 string,
+  a17 string,
+  a18 string,
+  a19 string,
+  a20 string,
+  a21 string,
+  a22 string,
+  a23 string,
+  a24 string,
+  a25 string,
+  a26 string,
+  a27 string,
+  a28 string,
+  a29 string,
+  a30 string,
+  a31 string,
+  a32 string,
+  a33 string,
+  a34 string,
+  a35 string,
+  a36 string,
+  a37 string,
+  a38 string,
+  a39 string,
+  a40 string,
+  a41 string,
+  a42 string,
+  a43 string,
+  a44 string,
+  a45 string,
+  a46 string,
+  a47 string,
+  a48 string,
+  a49 string,
+  a50 string,
+  a51 string,
+  a52 string,
+  a53 string,
+  a54 string,
+  a55 string,
+  a56 string,
+  a57 string
+);
+
+
+2.load data with sample data file named "sample.txt"
+LOAD DATA LOCAL INPATH '/root/sample.txt' OVERWRITE INTO TABLE orignal; 
+
+3.Create ORC file table with Snappy compression
+create table orc_snappy(
+  TIMEID string,
+  FILE_COLUMN_ID int,
+  CITY_ID int,
+  USER_BRAND_ID int,
+  CODE_ID int,
+  PROVINCENODE_ID int,
+  MANUFACTURER_ID int,
+  SYSTEM_ID int,
+  STATSTIME string,
+  MSISDN string,
+  TS_INCOMING_HTTP_REQ string,
+  TS_OUTGOING_HTTP_REQ string,
+  TS_INCOMING_HTTP_RESP string,
+  TS_OUTGOING_HTTP_RESP string,
+  TS_ACK_OR_ABORT string,
+  DURATION_TIME string,
+  URL string,
+  SP_DOMAIN string,
+  FILE_TYPE string,
+  SERVICE_TYPE string,
+  USER_AGENT_ORIGIN string,
+  USER_AGETN string,
+  SOFT_VERSION string,
+  HTTP_STATUS_CODE string,
+  HTTP_STATUS_SUBCODE string,
+  BEARER_TYPE string,
+  PROTOCAL_TYPE string,
+  CLIENT_ADDRESS string,
+  UPLINK_TRAFFIC string,
+  DOWNLINK_TRAFFIC string,
+  VOLUMESTREAM string,
+  WAPGW_IP string,
+  CDR_TYPE string,
+  SESSION_ID string,
+  GW_AVG string,
+  SP_AVG string,
+  NAS_IP_ADDR string,
+  APN string,
+  DESC_PORT string,
+  FILE_NAME string,
+  BACKUPA string,
+  BACKUPB string,
+  BACKUPC string,
+  BACKUPD string,
+  BACKUPE string,
+  HOUR string,
+  BACKUPF string,
+  BACKUPG string,
+  BACKUPH string,
+  SGSNIP string,
+  SPIP string,
+  SP_DOMAIN_L1 string,
+  SP_DOMAIN_L2 string,
+  BP_IP string,
+  LOAD_TIME string,
+  a1 string,
+  a2 string,
+  a3 string,
+  a4 string,
+  a5 string,
+  a6 string,
+  a7 string,
+  a8 string,
+  a9 string,
+  a10 string,
+  a11 string,
+  a12 string,
+  a13 string,
+  a14 string,
+  a15 string,
+  a16 string,
+  a17 string,
+  a18 string,
+  a19 string,
+  a20 string,
+  a21 string,
+  a22 string,
+  a23 string,
+  a24 string,
+  a25 string,
+  a26 string,
+  a27 string,
+  a28 string,
+  a29 string,
+  a30 string,
+  a31 string,
+  a32 string,
+  a33 string,
+  a34 string,
+  a35 string,
+  a36 string,
+  a37 string,
+  a38 string,
+  a39 string,
+  a40 string,
+  a41 string,
+  a42 string,
+  a43 string,
+  a44 string,
+  a45 string,
+  a46 string,
+  a47 string,
+  a48 string,
+  a49 string,
+  a50 string,
+  a51 string,
+  a52 string,
+  a53 string,
+  a54 string,
+  a55 string,
+  a56 string,
+  a57 string
+) stored as orc tblproperties ("orc.compress"="SNAPPY");
+
+4. Convert into ORC File with Snappy 
+INSERT OVERWRITE TABLE orc_snappy SELECT * FROM orignal; 
+
+
+5.Create ORC file table with Zlib compression
+create table orc_zlib(
+  TIMEID string,
+  FILE_COLUMN_ID int,
+  CITY_ID int,
+  USER_BRAND_ID int,
+  CODE_ID int,
+  PROVINCENODE_ID int,
+  MANUFACTURER_ID int,
+  SYSTEM_ID int,
+  STATSTIME string,
+  MSISDN string,
+  TS_INCOMING_HTTP_REQ string,
+  TS_OUTGOING_HTTP_REQ string,
+  TS_INCOMING_HTTP_RESP string,
+  TS_OUTGOING_HTTP_RESP string,
+  TS_ACK_OR_ABORT string,
+  DURATION_TIME string,
+  URL string,
+  SP_DOMAIN string,
+  FILE_TYPE string,
+  SERVICE_TYPE string,
+  USER_AGENT_ORIGIN string,
+  USER_AGETN string,
+  SOFT_VERSION string,
+  HTTP_STATUS_CODE string,
+  HTTP_STATUS_SUBCODE string,
+  BEARER_TYPE string,
+  PROTOCAL_TYPE string,
+  CLIENT_ADDRESS string,
+  UPLINK_TRAFFIC string,
+  DOWNLINK_TRAFFIC string,
+  VOLUMESTREAM string,
+  WAPGW_IP string,
+  CDR_TYPE string,
+  SESSION_ID string,
+  GW_AVG string,
+  SP_AVG string,
+  NAS_IP_ADDR string,
+  APN string,
+  DESC_PORT string,
+  FILE_NAME string,
+  BACKUPA string,
+  BACKUPB string,
+  BACKUPC string,
+  BACKUPD string,
+  BACKUPE string,
+  HOUR string,
+  BACKUPF string,
+  BACKUPG string,
+  BACKUPH string,
+  SGSNIP string,
+  SPIP string,
+  SP_DOMAIN_L1 string,
+  SP_DOMAIN_L2 string,
+  BP_IP string,
+  LOAD_TIME string,
+  a1 string,
+  a2 string,
+  a3 string,
+  a4 string,
+  a5 string,
+  a6 string,
+  a7 string,
+  a8 string,
+  a9 string,
+  a10 string,
+  a11 string,
+  a12 string,
+  a13 string,
+  a14 string,
+  a15 string,
+  a16 string,
+  a17 string,
+  a18 string,
+  a19 string,
+  a20 string,
+  a21 string,
+  a22 string,
+  a23 string,
+  a24 string,
+  a25 string,
+  a26 string,
+  a27 string,
+  a28 string,
+  a29 string,
+  a30 string,
+  a31 string,
+  a32 string,
+  a33 string,
+  a34 string,
+  a35 string,
+  a36 string,
+  a37 string,
+  a38 string,
+  a39 string,
+  a40 string,
+  a41 string,
+  a42 string,
+  a43 string,
+  a44 string,
+  a45 string,
+  a46 string,
+  a47 string,
+  a48 string,
+  a49 string,
+  a50 string,
+  a51 string,
+  a52 string,
+  a53 string,
+  a54 string,
+  a55 string,
+  a56 string,
+  a57 string
+) stored as orc tblproperties ("orc.compress"="ZLIB");
+
+6. Convert into ORC File with Zlib
+1)INSERT OVERWRITE TABLE orc_zlib SELECT * FROM orignal;
+
+7.Duplicate data table
+
+hive> INSERT OVERWRITE TABLE orc_zlib SELECT * FROM original;
+Total MapReduce jobs = 3
+Launching Job 1 out of 3
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1377655010681_0006, Tracking URL = http://server-334.novalocal:8088/proxy/application_1377655010681_0006/
+Kill Command = //usr/lib/hadoop/bin/hadoop job  -kill job_1377655010681_0006
+Hadoop job information for Stage-1: number of mappers: 8; number of reducers: 0
+2013-08-28 17:25:10,528 Stage-1 map = 0%,  reduce = 0%
+2013-08-28 17:25:30,237 Stage-1 map = 12%,  reduce = 0%, Cumulative CPU 15.39 sec
+2013-08-28 17:25:31,312 Stage-1 map = 16%,  reduce = 0%, Cumulative CPU 20.47 sec
+2013-08-28 17:25:32,414 Stage-1 map = 16%,  reduce = 0%, Cumulative CPU 20.47 sec
+2013-08-28 17:25:33,502 Stage-1 map = 33%,  reduce = 0%, Cumulative CPU 27.03 sec
+2013-08-28 17:25:34,555 Stage-1 map = 33%,  reduce = 0%, Cumulative CPU 27.03 sec
+2013-08-28 17:25:35,607 Stage-1 map = 33%,  reduce = 0%, Cumulative CPU 27.03 sec
+2013-08-28 17:25:36,749 Stage-1 map = 63%,  reduce = 0%, Cumulative CPU 35.48 sec
+2013-08-28 17:25:37,818 Stage-1 map = 63%,  reduce = 0%, Cumulative CPU 35.48 sec
+2013-08-28 17:25:38,906 Stage-1 map = 64%,  reduce = 0%, Cumulative CPU 36.64 sec
+2013-08-28 17:25:39,995 Stage-1 map = 90%,  reduce = 0%, Cumulative CPU 45.86 sec
+2013-08-28 17:25:41,051 Stage-1 map = 91%,  reduce = 0%, Cumulative CPU 47.34 sec
+2013-08-28 17:25:42,102 Stage-1 map = 97%,  reduce = 0%, Cumulative CPU 49.46 sec
+2013-08-28 17:25:43,158 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 53.08 sec
+MapReduce Total cumulative CPU time: 53 seconds 80 msec
+Ended Job = job_1377655010681_0006
+Stage-4 is filtered out by condition resolver.
+Stage-3 is selected by condition resolver.
+Stage-5 is filtered out by condition resolver.
+Launching Job 3 out of 3
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1377655010681_0007, Tracking URL = http://server-334.novalocal:8088/proxy/application_1377655010681_0007/
+Kill Command = //usr/lib/hadoop/bin/hadoop job  -kill job_1377655010681_0007
+Hadoop job information for Stage-3: number of mappers: 1; number of reducers: 0
+2013-08-28 17:25:50,363 Stage-3 map = 0%,  reduce = 0%
+2013-08-28 17:26:00,889 Stage-3 map = 13%,  reduce = 0%, Cumulative CPU 6.68 sec
+2013-08-28 17:26:01,947 Stage-3 map = 13%,  reduce = 0%, Cumulative CPU 6.68 sec
+2013-08-28 17:26:03,008 Stage-3 map = 13%,  reduce = 0%, Cumulative CPU 6.68 sec
+2013-08-28 17:26:04,075 Stage-3 map = 25%,  reduce = 0%, Cumulative CPU 9.85 sec
+2013-08-28 17:26:05,127 Stage-3 map = 25%,  reduce = 0%, Cumulative CPU 9.85 sec
+2013-08-28 17:26:06,183 Stage-3 map = 25%,  reduce = 0%, Cumulative CPU 9.85 sec
+2013-08-28 17:26:07,296 Stage-3 map = 38%,  reduce = 0%, Cumulative CPU 13.01 sec
+2013-08-28 17:26:08,341 Stage-3 map = 38%,  reduce = 0%, Cumulative CPU 13.01 sec
+2013-08-28 17:26:09,398 Stage-3 map = 63%,  reduce = 0%, Cumulative CPU 13.01 sec
+2013-08-28 17:26:10,448 Stage-3 map = 63%,  reduce = 0%, Cumulative CPU 16.18 sec
+2013-08-28 17:26:11,510 Stage-3 map = 63%,  reduce = 0%, Cumulative CPU 16.18 sec
+2013-08-28 17:26:12,583 Stage-3 map = 75%,  reduce = 0%, Cumulative CPU 19.35 sec
+2013-08-28 17:26:13,627 Stage-3 map = 75%,  reduce = 0%, Cumulative CPU 19.35 sec
+2013-08-28 17:26:14,685 Stage-3 map = 75%,  reduce = 0%, Cumulative CPU 19.35 sec
+2013-08-28 17:26:15,742 Stage-3 map = 88%,  reduce = 0%, Cumulative CPU 22.81 sec
+2013-08-28 17:26:16,816 Stage-3 map = 88%,  reduce = 0%, Cumulative CPU 22.81 sec
+2013-08-28 17:26:17,869 Stage-3 map = 88%,  reduce = 0%, Cumulative CPU 22.81 sec
+2013-08-28 17:26:18,923 Stage-3 map = 100%,  reduce = 0%, Cumulative CPU 26.06 sec
+MapReduce Total cumulative CPU time: 26 seconds 60 msec
+Ended Job = job_1377655010681_0007
+Loading data to table default.orc_zlib
+rmr: DEPRECATED: Please use 'rm -r' instead.
+Deleted /user/hive/warehouse/orc_zlib
+Table default.orc_zlib stats: [num_partitions: 0, num_files: 1, num_rows: 0, total_size: 5682600, raw_data_size: 0]
+1928080 Rows loaded to orc_zlib
+MapReduce Jobs Launched:
+Job 0: Map: 8   Cumulative CPU: 53.08 sec   HDFS Read: 1054134354 HDFS Write: 17877061 SUCCESS
+Job 1: Map: 1   Cumulative CPU: 26.06 sec   HDFS Read: 17924175 HDFS Write: 5682600 SUCCESS
+Total MapReduce CPU Time Spent: 1 minutes 19 seconds 140 msec
+OK
+Time taken: 77.553 seconds
+
+-rw-r--r--   3 root supergroup 1054103930 2013-08-28 17:23 /user/hive/warehouse/original/t1
+-rw-r--r--   3 root supergroup    5682600 2013-08-28 17:26 /user/hive/warehouse/orc_zlib/000000_0
+
+7.Query on ORC tables
+SELECT COUNT(*) FROM orc_zlib;
+SELECT DISTINCT TIMEID, FILE_COLUMN_ID FROM orc_zlib;
+
+8.Write MapReduce programing to generate ORC file in HDFS WITHOUT Hive
+hadoop jar orc.jar org.apache.hadoop.io.orc.test.Orc -libjars orc.jar,orctransition.jar,hive-common-0.11.0-cdh.jar,hive-exec-0.11.0-cdh.jar /user/sample.txt /user/output/orc
+
+[root@sb-node1 orc]# hadoop jar orc.jar org.apache.hadoop.io.orc.test.Orc -libjars orc.jar,orctransition.jar,hive-common-0.11.0-cdh.jar,hive-exec-0.11.0-cdh.jar /user/sample.txt /user/output/orc
+13/09/03 16:48:53 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+13/09/03 16:48:53 WARN snappy.LoadSnappy: Snappy native library is available
+13/09/03 16:48:53 INFO snappy.LoadSnappy: Snappy native library loaded
+13/09/03 16:48:53 INFO mapred.FileInputFormat: Total input paths to process : 1
+13/09/03 16:48:53 INFO mapred.JobClient: Running job: job_201309020959_0067
+13/09/03 16:48:54 INFO mapred.JobClient:  map 0% reduce 0%
+13/09/03 16:49:07 INFO mapred.JobClient:  map 29% reduce 0%
+13/09/03 16:49:08 INFO mapred.JobClient:  map 35% reduce 0%
+13/09/03 16:49:10 INFO mapred.JobClient:  map 52% reduce 0%
+13/09/03 16:49:11 INFO mapred.JobClient:  map 59% reduce 0%
+13/09/03 16:49:13 INFO mapred.JobClient:  map 70% reduce 0%
+13/09/03 16:49:14 INFO mapred.JobClient:  map 78% reduce 0%
+13/09/03 16:49:16 INFO mapred.JobClient:  map 79% reduce 0%
+13/09/03 16:49:17 INFO mapred.JobClient:  map 83% reduce 0%
+13/09/03 16:49:18 INFO mapred.JobClient:  map 86% reduce 0%
+13/09/03 16:49:21 INFO mapred.JobClient:  map 90% reduce 0%
+13/09/03 16:49:24 INFO mapred.JobClient:  map 94% reduce 0%
+13/09/03 16:49:27 INFO mapred.JobClient:  map 98% reduce 0%
+13/09/03 16:49:30 INFO mapred.JobClient:  map 100% reduce 0%
+13/09/03 16:49:36 INFO mapred.JobClient: Job complete: job_201309020959_0067
+13/09/03 16:49:36 INFO mapred.JobClient: Counters: 20
+13/09/03 16:49:36 INFO mapred.JobClient:   Job Counters
+13/09/03 16:49:36 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=119695
+13/09/03 16:49:36 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+13/09/03 16:49:36 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+13/09/03 16:49:36 INFO mapred.JobClient:     Launched map tasks=5
+13/09/03 16:49:36 INFO mapred.JobClient:     Data-local map tasks=5
+13/09/03 16:49:36 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+13/09/03 16:49:36 INFO mapred.JobClient:   File Input Format Counters
+13/09/03 16:49:36 INFO mapred.JobClient:     Bytes Read=628475271
+13/09/03 16:49:36 INFO mapred.JobClient:   File Output Format Counters
+13/09/03 16:49:36 INFO mapred.JobClient:     Bytes Written=24296575
+13/09/03 16:49:36 INFO mapred.JobClient:   FileSystemCounters
+13/09/03 16:49:36 INFO mapred.JobClient:     HDFS_BYTES_READ=628475716
+13/09/03 16:49:36 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=140055
+13/09/03 16:49:36 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=24296575
+13/09/03 16:49:36 INFO mapred.JobClient:   Map-Reduce Framework
+13/09/03 16:49:36 INFO mapred.JobClient:     Map input records=309145
+13/09/03 16:49:36 INFO mapred.JobClient:     Physical memory (bytes) snapshot=1799790592
+13/09/03 16:49:36 INFO mapred.JobClient:     Spilled Records=0
+13/09/03 16:49:36 INFO mapred.JobClient:     CPU time spent (ms)=120050
+13/09/03 16:49:36 INFO mapred.JobClient:     Total committed heap usage (bytes)=1784971264
+13/09/03 16:49:36 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=6345297920
+13/09/03 16:49:36 INFO mapred.JobClient:     Map input bytes=628458887
+13/09/03 16:49:36 INFO mapred.JobClient:     Map output records=309145
+13/09/03 16:49:36 INFO mapred.JobClient:     SPLIT_RAW_BYTES=445
+--------successfully finished job
+
+9.Use ORC file in HDFS to create Hive table
+create table orc_load(
+  TIMEID string,
+  FILE_COLUMN_ID string,
+  CITY_ID string,
+  USER_BRAND_ID string,
+  CODE_ID string,
+  PROVINCENODE_ID string,
+  MANUFACTURER_ID string,
+  SYSTEM_ID string,
+  STATSTIME string,
+  MSISDN string,
+  TS_INCOMING_HTTP_REQ string,
+  TS_OUTGOING_HTTP_REQ string,
+  TS_INCOMING_HTTP_RESP string,
+  TS_OUTGOING_HTTP_RESP string,
+  TS_ACK_OR_ABORT string,
+  DURATION_TIME string,
+  URL string,
+  SP_DOMAIN string,
+  FILE_TYPE string,
+  SERVICE_TYPE string,
+  USER_AGENT_ORIGIN string,
+  USER_AGETN string,
+  SOFT_VERSION string,
+  HTTP_STATUS_CODE string,
+  HTTP_STATUS_SUBCODE string,
+  BEARER_TYPE string,
+  PROTOCAL_TYPE string,
+  CLIENT_ADDRESS string,
+  UPLINK_TRAFFIC string,
+  DOWNLINK_TRAFFIC string,
+  VOLUMESTREAM string,
+  WAPGW_IP string,
+  CDR_TYPE string,
+  SESSION_ID string,
+  GW_AVG string,
+  SP_AVG string,
+  NAS_IP_ADDR string,
+  APN string,
+  DESC_PORT string,
+  FILE_NAME string,
+  BACKUPA string,
+  BACKUPB string,
+  BACKUPC string,
+  BACKUPD string,
+  BACKUPE string,
+  HOUR string,
+  BACKUPF string,
+  BACKUPG string,
+  BACKUPH string,
+  SGSNIP string,
+  SPIP string,
+  SP_DOMAIN_L1 string,
+  SP_DOMAIN_L2 string,
+  BP_IP string,
+  LOAD_TIME string,
+  a1 string,
+  a2 string,
+  a3 string,
+  a4 string,
+  a5 string,
+  a6 string,
+  a7 string,
+  a8 string,
+  a9 string,
+  a10 string,
+  a11 string,
+  a12 string,
+  a13 string,
+  a14 string,
+  a15 string,
+  a16 string,
+  a17 string,
+  a18 string,
+  a19 string,
+  a20 string,
+  a21 string,
+  a22 string,
+  a23 string,
+  a24 string,
+  a25 string,
+  a26 string,
+  a27 string,
+  a28 string,
+  a29 string,
+  a30 string,
+  a31 string,
+  a32 string,
+  a33 string,
+  a34 string,
+  a35 string,
+  a36 string,
+  a37 string,
+  a38 string,
+  a39 string,
+  a40 string,
+  a41 string,
+  a42 string,
+  a43 string,
+  a44 string,
+  a45 string,
+  a46 string,
+  a47 string,
+  a48 string,
+  a49 string,
+  a50 string,
+  a51 string,
+  a52 string,
+  a53 string,
+  a54 string,
+  a55 string,
+  a56 string,
+  a57 string
+) stored as orc tblproperties ("orc.compress"="NONE");
+
+9.Load ORC file into Hive table
+LOAD DATA INPATH 'hdfs://user/root/part-00000' OVERWRITE INTO TABLE orc_load; 
+
+
+hive> LOAD DATA INPATH '/user/root/part-00000' OVERWRITE INTO TABLE orc_load;
+Loading data to table default.orc_load
+rmr: DEPRECATED: Please use 'rm -r' instead.
+Deleted /user/hive/warehouse/orc_load
+Table default.orc_load stats: [num_partitions: 0, num_files: 1, num_rows: 0, total_size: 5085506, raw_data_size: 0]
+OK
+Time taken: 1.728 seconds
+hive>
+
+10.Query on ORC files by Hive command
+1)SELECT COUNT(*) FROM orc_load;
+
+hive> SELECT COUNT(*) FROM orc_load;
+Total MapReduce jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapred.reduce.tasks=<number>
+Starting Job = job_1377763711582_0008, Tracking URL = http://bdqac1-node2:8088/proxy/application_1377763711582_0008/
+Kill Command = //usr/lib/hadoop/bin/hadoop job  -kill job_1377763711582_0008
+Hadoop job information for Stage-1: number of mappers: 2; number of reducers: 1
+2013-09-04 10:01:11,124 Stage-1 map = 0%,  reduce = 0%
+2013-09-04 10:01:16,323 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.5 sec
+2013-09-04 10:01:17,372 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 4.4 sec
+2013-09-04 10:01:18,408 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 4.4 sec
+2013-09-04 10:01:19,444 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 4.4 sec
+2013-09-04 10:01:20,481 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.34 sec
+MapReduce Total cumulative CPU time: 6 seconds 340 msec
+Ended Job = job_1377763711582_0008
+MapReduce Jobs Launched:
+Job 0: Map: 2  Reduce: 1   Cumulative CPU: 6.34 sec   HDFS Read: 5035697 HDFS Write: 6 SUCCESS
+Total MapReduce CPU Time Spent: 6 seconds 340 msec
+OK
+66030
+Time taken: 18.843 seconds, Fetched: 1 row(s)
+
+
+2)SELECT TIMEID, FILE_COLUMN_ID FROM orc_load;
+"01035370   5006750129084425001030000      "    "01"
+"01034330   5633400129085610001030000      "    "01"
+"48024910   2387090129084840000094900      "    "01"
+"01005370   2594790129083954001009999      "    "01"
+"01032900   0172090129084129001032900      "    "01"
+"01032900   0182130129084731001032900      "    "01"
+"01003060   2552620129083841001009999      "    "01"
+"01033050   0171620129083730001033050      "    "01"
+"01042400   4861570129085311001040000      "    "01"
+"01005083   2576060129083955001009999      "    "01"
+"00275810   4796210129084557000049999      "    "01"
+"03055840   8652400129085121003050000      "    "01"
+"03024910   2606150129084441003020000      "    "01"
+Time taken: 15.512 seconds, Fetched: 66030 row(s)
+hive>
+
+
+3)SELECT DISTINCT TIMEID, FILE_COLUMN_ID FROM orc_load;

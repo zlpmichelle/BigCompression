@@ -26,9 +26,8 @@
         <module name="hadoophbaselzma" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.7">
       <module name="BigCompression" target="1.5" />
-      <module name="hadoophbaselzma" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
