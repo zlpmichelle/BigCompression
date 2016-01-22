@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.spark:spark-examples_2.10:1.1.0-cdh5.2.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-examples_2.10/1.1.0-cdh5.2.0-SNAPSHOT/spark-examples_2.10-1.1.0-cdh5.2.0-20140917.125843-6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-examples_2.10/1.1.0-cdh5.2.0-SNAPSHOT/spark-examples_2.10-1.1.0-cdh5.2.0-20140917.125843-6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-examples_2.10/1.1.0-cdh5.2.0-SNAPSHOT/spark-examples_2.10-1.1.0-cdh5.2.0-20140917.125843-6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
